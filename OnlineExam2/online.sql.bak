@@ -1,0 +1,51 @@
+create table register_student(
+   roll number(7) constraint rollpk primary key,
+    name varchar2(30)
+);
+
+create or replace function match(rolls in number,names in varchar2) return number as
+    rollss number(5);
+begin
+    select roll into rollss from register_student where roll=rolls and name=names; 
+    return rolls;
+end;
+ 
+create or replace procedure authentication(userId in varchar,rollno in number,result out varchar) as 
+    cnt number(4);
+begin
+    select count(*) into cnt from register_student where roll=rollno and name=userId;
+    if(cnt<>0) then
+        result:='valid credentials';
+    else
+        result:='invalid credentials'; 
+    end if;
+    end;
+  /
+  
+  select * from register_student;
+  
+  CREATE TABLE QUESTION(
+    QNO NUMBER(5) CONSTRAINT PKQNO PRIMARY KEY,
+    QUES    VARCHAR(500),
+    OP1     VARCHAR(300),
+    OP2     VARCHAR(300),
+    OP3     VARCHAR(300),
+    OP4     VARCHAR(300),
+    ANS     NUMBER(20)
+);
+
+DROP TABLE QUESTION;
+select * from question;
+
+CREATE TABLE TEST_RESULT(
+    QNO NUMBER(5),
+    ANS NUMBER(5)
+);
+drop table test_result;
+select * from TEST_RESULT;
+
+CREATE TABLE ALL_MARKS(
+	ROLL NUMBER(5) CONSTRAINT PKROLL_AM PRIMARY KEY,
+	NAME VARCHAR2(30),
+	MARKS NUMBER(5)
+)

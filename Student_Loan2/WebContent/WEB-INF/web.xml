@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+	
+	<display-name>Student Loan</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>first</servlet-name>
+		<servlet-class>com.nt.loan.Register</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/registers</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>second</servlet-name>
+		<servlet-class>com.nt.loan.Login</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>second</servlet-name>
+		<url-pattern>/authentication</url-pattern>
+	</servlet-mapping>
+ 
+	<servlet>
+		<servlet-name>third</servlet-name>
+		<servlet-class>com.nt.loan.Home</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>third</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>fourth</servlet-name>
+		<servlet-class>com.nt.loan.Admin</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>fourth</servlet-name>
+		<url-pattern>/verify</url-pattern>
+	</servlet-mapping>
+<!--	
+	<servlet>
+		<servlet-name>fifth</servlet-name>
+		<servlet-class>com.nt.exam.Test</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>fifth</servlet-name>
+		<url-pattern>/examurl</url-pattern>
+	</servlet-mapping>
+	
+ 	
+	<servlet>
+		<servlet-name>sixth</servlet-name>
+		<servlet-class>com.nt.exam.Test</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>sixth</servlet-name>
+		<url-pattern>/nxt</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>seven</servlet-name>
+		<servlet-class>com.nt.exam.Submits</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>seven</servlet-name>
+		<url-pattern>/sub</url-pattern>
+	</servlet-mapping>
+	
+  -->
+</web-app>
